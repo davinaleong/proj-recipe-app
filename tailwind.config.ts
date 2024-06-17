@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -8,13 +8,85 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        ibGreen: {
+          "50": "#eceee6",
+          "100": "#d8decc",
+          "200": "#b2bd9a",
+          "300": "#8b9b67",
+          "400": "#657a35",
+          "500": "#3e5902",
+          "600": "#324702",
+          "700": "#253501",
+          "800": "#1f2d01",
+          "900": "#0c1200",
+          "950": "#060900",
+        },
+        ibYellow: {
+          "50": "#fef5e6",
+          "100": "#fceccd",
+          "200": "#fad99b",
+          "300": "#f7c569",
+          "400": "#f5b237",
+          "500": "#f29f05",
+          "600": "#c27f04",
+          "700": "#915f03",
+          "800": "#614002",
+          "900": "#302001",
+          "950": "#181000",
+        },
+        ibBrickRed: {
+          "50": "#f6eae6",
+          "100": "#edd5cd",
+          "200": "#dbac9a",
+          "300": "#ca8268",
+          "400": "#b85935",
+          "500": "#a62f03",
+          "600": "#852602",
+          "700": "#641c02",
+          "800": "#421301",
+          "900": "#210901",
+          "950": "#110500",
+        },
+        ibMaroon: {
+          "50": "#ece6e6",
+          "100": "#d9cccc",
+          "200": "#b39999",
+          "300": "#8c6767",
+          "400": "#663434",
+          "500": "#400101",
+          "600": "#330101",
+          "700": "#260101",
+          "800": "#1a0000",
+          "900": "#1a0000",
+          "950": "#060000",
+        },
+        ibRed: {
+          "50": "#fee6e6",
+          "100": "#fccdcd",
+          "200": "#fa9c9c",
+          "300": "#f76a6a",
+          "400": "#f53939",
+          "500": "#f20707",
+          "600": "#c20606",
+          "700": "#910404",
+          "800": "#910404",
+          "900": "#300101",
+          "950": "#180101",
+        },
+      },
+      fontFamily: {
+        sans: ["Roboto", "Tahoma", "Arial", "Helvetica", "sans-serif"],
+        serif: [
+          "'Playfair Display'",
+          "Georgia",
+          "'Times New Roman'",
+          "Roman",
+          "serif",
+        ],
       },
     },
   },
   plugins: [],
-};
-export default config;
+}
+export default config

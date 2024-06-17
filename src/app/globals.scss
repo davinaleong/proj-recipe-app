@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wrapper-width: theme("screens.md");
+  --flow-spacer: theme("spacing.4");
+
+  --clr-bg: theme("colors.ibYellow.50");
+  --clr-fg: theme("colors.ibMaroon.500");
+  --clr-a: theme("colors.ibBrickRed.500");
+
+  --clr-header-bg: theme("colors.ibGreen.200");
+  --clr-header-border: theme("colors.ibGreen.500");
+  --clr-header-a: theme("colors.ibMaroon.500");
+
+  --clr-tabs-bg: theme("colors.ibYellow.200");
+  --clr-tabs-border: theme("colors.ibYellow.500");
+  --clr-tabs-a: theme("colors.black");
+}
+
+@layer base {
+  // Roboto
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Thin.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-ThinItalic.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Light.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-LightItalic.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Regular.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Italic.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Bold.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-BoldItalic.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-Black.ttf) format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./../assets/fonts/Roboto/Roboto-BlackItalic.ttf) format(truetype);
+  }
+
+  // Playfair Display
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: variable-exists($name: PlayfairDisplay-VariableFont_wght);
+    font-display: swap;
+    src: url(./../assets/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf)
+      format(truetype);
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: variable-exists(
+      $name: PlayfairDisplay-Italic-VariableFont_wght
+    );
+    font-display: swap;
+    src: url(./../assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf)
+      format(truetype);
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utitlities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .flow {
+    --_flow-spacer: var(--flow-spacer);
+
+    & > * + * {
+      margin-block-start: var(--_flow-spacer);
+    }
+  }
+}
