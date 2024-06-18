@@ -1,0 +1,73 @@
+.q-container-primary-header {
+  container-name: q-container-primary-header;
+}
+
+.primary-header {
+  --_primary-header-link-clr: var(--clr-primary-header-fg);
+  --_primary-header-link-bg-clr: var(--clr-primary-header-bg);
+  --_primary-header-link-border-clr: var(--clr-primary-header-border);
+  --_primary-header-link-border: thin solid
+    var(--_primary-header-link-border-clr);
+  --_primary-header-link-decoration: none;
+
+  --_primary-header-link-hover-clr: var(--clr-primary-header-fg);
+  --_primary-header-link-hover-bg-clr: var(--clr-primary-header-hover-bg);
+  --_primary-header-link-hover-border-clr: var(--clr-primary-header-border);
+  --_primary-header-link-hover-border: thin solid
+    var(--_primary-header-link-hover-border-clr);
+  --_primary-header-link-hover-decoration: none;
+
+  --_primary-header-link-alt-clr: var(--clr-primary-header-fg-alt);
+  --_primary-header-link-alt-decoration: underline;
+
+  --_primary-header-link-alt-hover-clr: var(--clr-primary-header-hover-fg-alt);
+  --_primary-header-link-alt-hover-decoration: underline;
+
+  --_primary-header-spacer-inline: theme("spacing.4");
+  --_primary-header-spacer-block: theme("spacing.3");
+  --_primary-header-spacer-block-end: theme("spacing.7");
+  --_primary-header-spacer-gap: theme("spacing.2");
+
+  --_primary-header-ai: center;
+  --_primary-header-jc: center;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &__brand {
+    display: none;
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__link,
+    &__link:active,
+    &__link:visited {
+      display: inline-flex;
+      align-items: var(--_primary-header-ai);
+      justify-content: var(--_primary-header-jc);
+      color: var(--_primary-header-link-clr);
+      background-color: var(--_primary-header-link-bg-clr);
+      border-block-start: var(--_primary-header-link-border);
+      flex-direction: column;
+      gap: var(--_primary-header-spacer-gap);
+      padding-block-start: var(--_primary-header-spacer-block);
+      padding-block-end: var(--_primary-header-spacer-block-end);
+      padding-inline-start: var(--_primary-header-spacer-inline);
+      padding-inline-end: var(--_primary-header-spacer-inline);
+      text-decoration: var(--_primary-header-link-decoration);
+
+      &:hover {
+        color: var(--_primary-header-link-hover-clr);
+        background-color: var(--_primary-header-link-hover-bg-clr);
+        border-block-start: var(--_primary-header-link-hover-border);
+        text-decoration: var(--_primary-header-link-hover-decoration);
+      }
+    }
+  }
+}

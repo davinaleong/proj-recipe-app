@@ -5,7 +5,7 @@ import "./buttons.scss"
 
 function BackToTopButton() {
   return (
-    <Link href="#top" className="btn btn-back-to-top | fixed right-4 bottom-4">
+    <Link href="#top" className="btn btn-back-to-top">
       <Image src={upIcon} alt="Back to top icon" width="32" height="32" />
       <span className="sr-only">Back to top</span>
     </Link>

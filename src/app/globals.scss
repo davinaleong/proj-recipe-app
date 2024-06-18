@@ -10,15 +10,19 @@
   --wrapper-width: theme("screens.lg");
   --card-width: 200px;
   --flow-spacer: var(--primary-spacer);
+  --header-height: 6.73em;
 
   --clr-bg: theme("colors.ibYellow.50");
   --clr-fg: theme("colors.ibMaroon.500");
   --clr-a: theme("colors.ibBrickRed.500");
   --clr-a-hover: theme("colors.ibBrickRed.700");
 
-  --clr-header-bg: theme("colors.ibGreen.200");
-  --clr-header-border: theme("colors.ibGreen.500");
-  --clr-header-a: theme("colors.ibMaroon.500");
+  --clr-primary-header-bg: theme("colors.ibGreen.200");
+  --clr-primary-header-hover-bg: theme("colors.ibGreen.300");
+  --clr-primary-header-border: theme("colors.ibGreen.500");
+  --clr-primary-header-fg: theme("colors.black");
+  --clr-primary-header-fg-alt: theme("colors.ibMaroon.500");
+  --clr-primary-header-hover-fg-alt: theme("colors.ibMaroon.700");
 
   --clr-tabs-bg: theme("colors.ibYellow.200");
   --clr-tabs-border: theme("colors.ibYellow.500");
@@ -186,6 +190,7 @@ main {
 
   padding-inline-start: var(--_main-spacer);
   padding-inline-end: var(--_main-spacer);
+  padding-block-end: calc(var(--_main-spacer) + var(--header-height));
 }
 
 .wrapper {

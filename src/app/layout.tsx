@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import PrimaryHeader from "./components/primaryHeader/primaryHeader"
 import BackToTopButton from "./components/buttons/backToTopButton"
 import "./globals.scss"
 
@@ -15,6 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body id="top" className="relative">
+        <PrimaryHeader />
+
         {children}
 
         <BackToTopButton />

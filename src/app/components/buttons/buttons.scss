@@ -59,6 +59,10 @@
     --_btn-width: theme("width.7");
     --_btn-height: theme("height.7");
 
+    position: fixed;
+    right: theme("spacing.4");
+    bottom: theme("spacing.4");
+    z-index: 2;
     flex-direction: column;
 
     &:hover {
