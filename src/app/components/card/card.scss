@@ -1,7 +1,7 @@
 .card-grid {
   display: grid;
   gap: var(--primary-spacer);
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
 }
 
 .card {
@@ -14,7 +14,6 @@
   --_card-image-width: theme("width.full");
   --_card-image-of: cover;
   --_card-image-ar: theme("aspectRatio.video");
-
   --_card-body-spacer: theme("padding.3");
 
   background-color: var(--_card-bg-clr);
