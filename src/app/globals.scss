@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --wrapper-width: theme("screens.md");
-  --flow-spacer: theme("spacing.4");
+  --primary-spacer: theme("spacing.4");
+
+  --wrapper-width: theme("screens.lg");
+  --flow-spacer: var(--primary-spacer);
 
   --clr-bg: theme("colors.ibYellow.50");
   --clr-fg: theme("colors.ibMaroon.500");
   --clr-a: theme("colors.ibBrickRed.500");
+  --clr-a-hover: theme("colors.ibBrickRed.700");
 
   --clr-header-bg: theme("colors.ibGreen.200");
   --clr-header-border: theme("colors.ibGreen.500");
@@ -17,6 +20,12 @@
   --clr-tabs-bg: theme("colors.ibYellow.200");
   --clr-tabs-border: theme("colors.ibYellow.500");
   --clr-tabs-a: theme("colors.black");
+
+  --clr-card-bg: theme("colors.white");
+  --clr-card-fg: theme("colors.black");
+
+  --clr-focus: theme("colors.black");
+  --clr-focus-alt: theme("colors.white");
 
   --ff-primary: theme("fontFamily.sans");
   --ff-secondary: theme("fontFamily.serif");
@@ -138,6 +147,61 @@ body {
   background-size: 3em 3em;
   font-size: var(--fs-base);
   font-family: var(--ff-primary);
+}
+
+:focus {
+  outline: thin solid var(--clr-focus);
+  border: thin solid var(--clr-focus-alt);
+  border-radius: theme("borderRadius.sm");
+  overflow: hidden;
+}
+
+a {
+  --_a-clr: var(--clr-a);
+  --_a-decoration: underline;
+
+  --_a-hover-clr: var(--clr-a-hover);
+  --_a-hover-decoration: underline;
+
+  color: var(--_a-clr);
+  text-decoration: var(--_a-decoration);
+
+  &:active,
+  &:visited {
+    color: var(--_a-clr);
+    text-decoration: var(--_a-decoration);
+  }
+
+  &:hover {
+    color: var(--_a-hover-clr);
+    text-decoration: var(--_a-hover-decoration);
+  }
+}
+
+main {
+  --_main-spacer: var(--primary-spacer);
+
+  padding-inline-start: var(--_main-spacer);
+  padding-inline-end: var(--_main-spacer);
+}
+
+.wrapper {
+  --_wrapper-width: var(--wrapper-width);
+
+  width: min(100%, var(--_wrapper-width));
+
+  &-centered {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+}
+
+.q-container {
+  container-type: inline-size;
+
+  &-main {
+    container-name: q-container-main;
+  }
 }
 
 @layer utitlities {

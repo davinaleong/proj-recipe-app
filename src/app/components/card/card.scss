@@ -1,0 +1,31 @@
+.card {
+  --_card-clr: var(--clr-card-fg);
+  --_card-bg-clr: var(--clr-card-bg);
+  --_card-br: theme("borderRadius.sm");
+  --_card-shadow: theme("boxShadow.md");
+  --_card-overflow: hidden;
+
+  --_card-image-width: theme("width.full");
+  --_card-image-of: cover;
+  --_card-image-ar: theme("aspectRatio.video");
+
+  --_card-body-spacer: theme("padding.3");
+
+  background-color: var(--_card-bg-clr);
+  border-radius: var(--_card-br);
+  box-shadow: var(--_card-shadow);
+  overflow: var(--_card-overflow);
+
+  &__image {
+    width: var(--_card-image-width);
+    aspect-ratio: var(--_card-image-ar);
+    object-fit: var(--_card-image-of);
+  }
+
+  &__body {
+    padding-block-start: var(--_card-body-spacer);
+    padding-block-end: var(--_card-body-spacer);
+    padding-inline-start: var(--_card-body-spacer);
+    padding-inline-end: var(--_card-body-spacer);
+  }
+}
