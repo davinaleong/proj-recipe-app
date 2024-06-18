@@ -8,7 +8,20 @@ const link: LinkInterface = { label: "Chicken Wings", href: "#" }
 export default function Home() {
   return (
     <main className="wrapper wrapper-centered q-container q-container-main bg-ibYellow-50 min-h-screen">
-      <Card link={link} />
+      <div className="card-grid">
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+        <Card link={link} />
+      </div>
     </main>
   )
 }
