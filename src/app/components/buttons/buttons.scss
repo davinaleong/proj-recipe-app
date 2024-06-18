@@ -1,0 +1,68 @@
+.btn {
+  --_btn-clr: theme("colors.white");
+  --_btn-bg-clr: theme("colors.black");
+  --_btn-border-clr: theme("colors.black");
+  --_btn-border: thin solid var(--_btn-border-clr);
+
+  --_btn-hover-clr: theme("colors.white");
+  --_btn-hover-bg-clr: theme("colors.black");
+  --_btn-hover-border-clr: theme("colors.black");
+  --_btn-hover-border: thin solid var(--_btn-hover-border-clr);
+
+  --_btn-spacer-block: theme("spacing.3");
+  --_btn-spacer-inline: theme("spacing.4");
+  --_btn-spacer-gap: theme("spacing.2");
+
+  --_btn-width: auto;
+  --_btn-height: auto;
+  --_btn-ai: center;
+  --_btn-jc: center;
+  --_btn-spacer-br: theme("borderRadius.sm");
+  --_btn-shadow: theme("boxShadow.md");
+
+  display: inline-flex;
+  color: var(--_btn-clr);
+  background-color: var(--_btn-bg-clr);
+  border: var(--_btn-border);
+  align-items: var(--_btn-ai);
+  justify-content: var(--_btn-jc);
+  gap: var(--_btn-spacer-gap);
+  padding-block-start: var(--_btn-spacer-block);
+  padding-block-end: var(--_btn-spacer-block);
+  padding-inline-start: var(--_btn-spacer-inline);
+  padding-inline-end: var(--_btn-spacer-inline);
+  border-radius: var(--_btn-spacer-br);
+  box-shadow: var(--_btn-shadow);
+  max-width: var(--_btn-width);
+  min-height: var(--_btn-height);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--_btn-hover-clr);
+    background-color: var(--_btn-hover-bg-clr);
+    border: var(--_btn-hover-border);
+  }
+
+  &-back-to-top {
+    --_btn-clr: theme("colors.black");
+    --_btn-bg-clr: theme("colors.ibYellow.500");
+    --_btn-border-clr: theme("colors.ibYellow.500");
+
+    --_btn-hover-clr: theme("colors.black");
+    --_btn-hover-bg-clr: theme("colors.ibYellow.300");
+    --_btn-hover-border-clr: theme("colors.ibYellow.300");
+
+    --_btn-spacer-block: theme("spacing.2");
+    --_btn-spacer-inline: theme("spacing.2");
+
+    --_btn-width: theme("width.7");
+    --_btn-height: theme("height.7");
+
+    flex-direction: column;
+
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+import Image from "next/image"
+import Link from "next/link"
+import upIcon from "./../../../assets/images/ib-up-icon.svg"
+import "./buttons.scss"
+
+function BackToTopButton() {
+  return (
+    <Link href="#top" className="btn btn-back-to-top | fixed right-4 bottom-4">
+      <Image src={upIcon} alt="Back to top icon" width="32" height="32" />
+      <span className="sr-only">Back to top</span>
+    </Link>
+  )
+}
+
+export default BackToTopButton
