@@ -21,6 +21,7 @@ export default function Home() {
         <Card link={link} />
         <Card link={link} />
         <Card link={link} />
+        <Card link={link} />
       </div>
     </main>
   )
