@@ -17,6 +17,14 @@
   --clr-tabs-bg: theme("colors.ibYellow.200");
   --clr-tabs-border: theme("colors.ibYellow.500");
   --clr-tabs-a: theme("colors.black");
+
+  --ff-primary: theme("fontFamily.sans");
+  --ff-secondary: theme("fontFamily.serif");
+
+  --fs-base: theme("fontSize.base");
+  --fs-heading: theme("fontSize.3xl");
+  --fs-sub-heading: theme("fontSize.2xl");
+  --fs-micro-copy: theme("fontSize.sm");
 }
 
 @layer base {
@@ -124,13 +132,12 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+  background-image: url(./../assets/images/ib-pattern-c.jpg);
+  background-size: 3em 3em;
+  font-size: var(--fs-base);
+  font-family: var(--ff-primary);
 }
 
 @layer utitlities {
