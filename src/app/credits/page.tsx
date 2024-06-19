@@ -1,12 +1,17 @@
+import Image from "next/image"
+import Link from "next/link"
+import logo from "./../../assets/images/ib-logo.svg"
 import BackButton from "../components/buttons/backButton"
 
 export default function Credits() {
   return (
     <main className="page page-credits wrapper wrapper-centered flow">
-      <h1 className="text-ibGreen-500 font-serif text-3xl font-black flex align-center gap-2">
-        <BackButton />
-        {`Credits`}
-      </h1>
+      <header>
+        <h1 className="text-ibGreen-500 font-serif text-3xl font-black flex align-center gap-2">
+          <BackButton />
+          {`Credits`}
+        </h1>
+      </header>
 
       <article className="flow">
         <p>
@@ -27,6 +32,13 @@ export default function Credits() {
 
         <p>Ivy&apos;s Bistro &copy; Davina Leong, 2024</p>
       </article>
+
+      <footer>
+        <Link href="/">
+          <Image src={logo} alt="Ivy's Bistro Logo" width="150" height="100" />
+          <span className="sr-only">{`Ivy&apos;s Bistro`}</span>
+        </Link>
+      </footer>
     </main>
   )
 }
