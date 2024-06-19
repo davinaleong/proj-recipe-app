@@ -1,5 +1,36 @@
 .page {
   &-recipe {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: theme("fontFamily.serif");
+      font-weight: theme("fontWeight.black");
+      color: theme("colors.ibGreen.500");
+    }
+
+    h1 {
+      font-size: theme("fontSize.4xl");
+    }
+
+    h2 {
+      font-size: theme("fontSize.3xl");
+    }
+
+    h3 {
+      font-size: theme("fontSize.2xl");
+    }
+
+    h4 {
+      font-size: theme("fontSize.xl");
+    }
+
+    h5 {
+      font-size: theme("fontSize.lg");
+    }
+
     img {
       object-fit: cover;
       aspect-ratio: theme("aspectRatio.video");
