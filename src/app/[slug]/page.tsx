@@ -1,6 +1,7 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Image from "next/image"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 import BackButton from "./../components/buttons/backButton"
 import { getContentfulEntries } from "./../lib/contentful/sdk"
 import placeholder from "./../../assets/images/ib-no-image-b.png"
@@ -22,9 +23,22 @@ async function getData(slug: string) {
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params
-  const { fields } = await getData(slug)
-  const { description, ingredients, preparation, variations, remarks, image } =
-    fields
+  const item = await getData(slug)
+  if (!item) {
+    notFound()
+  }
+
+  const { fields } = item
+
+  const {
+    title,
+    description,
+    ingredients,
+    preparation,
+    variations,
+    remarks,
+    image,
+  } = fields
 
   let thisSrc: any = placeholder
   let thisAlt: string = "ib-no-image-b.png"
@@ -63,7 +77,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <header className="flow">
           <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
             <BackButton />
-            {fields.title}
+            {title}
           </h1>
 
           <nav className="flex align-center justify-around">
