@@ -42,8 +42,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   let thisSrc: any = placeholder
   let thisAlt: string = "ib-no-image-b.png"
-  let thisWidth: any = "32"
-  let thisHeight: any = "32"
+  let thisWidth: any = 1920
+  let thisHeight: any = 1080
+  let thisImage = <></>
 
   if (image) {
     const { fields } = image
@@ -51,6 +52,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
     thisAlt = `${fields.file.title}`
     thisWidth = fields.file.details.image.width
     thisHeight = fields.file.details.image.height
+
+    thisImage = (
+      <Image
+        src={thisSrc}
+        alt={thisAlt}
+        className="inline-block rounded-sm shadow-md"
+        width={thisWidth}
+        height={thisHeight}
+      />
+    )
   }
 
   let thisDescription = <></>
@@ -88,13 +99,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             {remarks ? <Link href="#remarks">Remarks</Link> : <></>}
           </nav>
 
-          <Image
-            src={thisSrc}
-            alt={thisAlt}
-            className="inline-block rounded-sm shadow-md"
-            width={thisWidth}
-            height={thisHeight}
-          />
+          {thisImage}
         </header>
 
         {thisDescription}
