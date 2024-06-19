@@ -190,6 +190,7 @@ main {
 
   padding-inline-start: var(--_main-spacer);
   padding-inline-end: var(--_main-spacer);
+  padding-block-start: var(--_main-spacer);
   padding-block-end: calc(var(--_main-spacer) + var(--header-height));
 }
 
@@ -212,16 +213,16 @@ main {
   }
 }
 
+.flow {
+  --_flow-spacer: var(--flow-spacer);
+
+  & > * + * {
+    margin-block-start: var(--_flow-spacer);
+  }
+}
+
 @layer utitlities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .flow {
-    --_flow-spacer: var(--flow-spacer);
-
-    & > * + * {
-      margin-block-start: var(--_flow-spacer);
-    }
   }
 }
