@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import LinkInterface from "./lib/link/LinkInterface"
 import Card from "./components/card/card"
 import potIcon from "./../assets/images/ib-favicon.svg"
 import { getEntries } from "./lib/contentful/sdk"
