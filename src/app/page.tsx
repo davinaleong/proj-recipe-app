@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import Card from "./components/card/card"
+import FulfillmentDialog from "./components/dialogs/fulfillmentDialog"
 import potIcon from "./../assets/images/ib-favicon.svg"
 import { getContentfulEntries } from "./lib/contentful/sdk"
 import "./home-page.scss"
@@ -13,7 +14,7 @@ export default async function Home() {
   const recipes = await getData()
 
   return (
-    <main className="page page-home wrapper wrapper-centered flow">
+    <main className="page page-home wrapper wrapper-centered flow relative">
       <header>
         <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
           {`Welcome to Ivy's Bistro`}
@@ -33,6 +34,8 @@ export default async function Home() {
           <Card key={index} recipe={recipe} />
         ))}
       </div>
+
+      <FulfillmentDialog label="Please enter the password to proceed:" />
     </main>
   )
 }

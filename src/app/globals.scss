@@ -6,6 +6,7 @@
 
 :root {
   --primary-spacer: theme("spacing.4");
+  --secondary-spacer: theme("spacing.2");
 
   --wrapper-width: theme("screens.lg");
   --card-width: 200px;
@@ -34,6 +35,16 @@
 
   --clr-focus: theme("colors.black");
   --clr-focus-alt: theme("colors.white");
+
+  --clr-btn: theme("colors.white");
+  --clr-btn-bg: theme("colors.ibGreen.500");
+  --clr-btn-border: theme("colors.ibGreen.500");
+  --btn-border: thin solid var(--clr-btn-border);
+
+  --clr-btn-hover: theme("colors.white");
+  --clr-btn-hover-bg: theme("colors.ibGreen.300");
+  --clr-btn-hover-border: theme("colors.ibGreen.300");
+  --btn-hover-border: thin solid var(--clr-btn-hover-border);
 
   --ff-primary: theme("fontFamily.sans");
   --ff-secondary: theme("fontFamily.serif");
