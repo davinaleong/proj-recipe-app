@@ -22,7 +22,8 @@ async function getData(slug: string) {
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params
   const { fields } = await getData(slug)
-  const { description, ingredients, preparation, remarks, image } = fields
+  const { description, ingredients, preparation, variations, remarks, image } =
+    fields
 
   let thisSrc: any = placeholder
   let thisAlt: string = "ib-no-image-b.png"
@@ -76,6 +77,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
             {description ? <Link href="#description">Description</Link> : <></>}
             <Link href="#ingredients">Ingredients</Link>
             <Link href="#preparation">Preparation</Link>
+            {variations ? <Link href="#variations">Variations</Link> : <></>}
             {remarks ? <Link href="#remarks">Remarks</Link> : <></>}
           </nav>
 
@@ -104,6 +106,14 @@ export default async function Page({ params }: { params: { slug: string } }) {
           </h2>
 
           {documentToReactComponents(preparation)}
+        </section>
+
+        <section id="varations" className="flow">
+          <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
+            Variations
+          </h2>
+
+          {documentToReactComponents(variations)}
         </section>
 
         {thisRemarks}
