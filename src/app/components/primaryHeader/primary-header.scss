@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (width > theme("screens.md")) {
+@media screen and (width >= theme("screens.md")) {
   .primary-header {
     position: fixed;
     top: 0;

@@ -222,7 +222,7 @@ main {
   }
 }
 
-@media screen and (width > theme("screens.md")) {
+@media screen and (width >= theme("screens.md")) {
   main {
     padding-block-start: calc(var(--_main-spacer) + var(--header-height-lg));
     padding-block-end: var(--_main-spacer);

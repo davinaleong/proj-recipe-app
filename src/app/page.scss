@@ -1,0 +1,9 @@
+.home-logo {
+  display: block;
+}
+
+@media screen and (width >= theme("screens.md")) {
+  .home-logo {
+    display: none;
+  }
+}
