@@ -1,4 +1,4 @@
-export default interface LinkInterface {
+export default interface LibLinkInterface {
   label: string
   href: string
 }
