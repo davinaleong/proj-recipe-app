@@ -4,6 +4,7 @@ import Link from "next/link"
 import BackButton from "./../components/buttons/backButton"
 import { getContentfulEntries } from "./../lib/contentful/sdk"
 import placeholder from "./../../assets/images/ib-no-image-b.png"
+import RecipeSection from "../components/recipeSection/recipeSection"
 import "./recipe-page.scss"
 
 export async function generateStaticParams() {
@@ -41,26 +42,18 @@ export default async function Page({ params }: { params: { slug: string } }) {
   let thisDescription = <></>
   if (description) {
     thisDescription = (
-      <section id="description" className="flow">
-        <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
-          Description
-        </h2>
-
+      <RecipeSection id="description" heading="Description">
         {documentToReactComponents(description)}
-      </section>
+      </RecipeSection>
     )
   }
 
   let thisRemarks = <></>
   if (remarks) {
     thisRemarks = (
-      <section id="remarks" className="flow">
-        <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
-          Remarks
-        </h2>
-
+      <RecipeSection id="remarks" heading="Remarks">
         {remarks}
-      </section>
+      </RecipeSection>
     )
   }
 
@@ -92,29 +85,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
         {thisDescription}
 
-        <section id="ingredients" className="flow">
-          <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
-            Ingredients
-          </h2>
-
+        <RecipeSection id="ingredients" heading="Ingredients">
           {documentToReactComponents(ingredients)}
-        </section>
+        </RecipeSection>
 
-        <section id="preparation" className="flow">
-          <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
-            Preparation
-          </h2>
-
+        <RecipeSection id="preparation" heading="Preparation">
           {documentToReactComponents(preparation)}
-        </section>
+        </RecipeSection>
 
-        <section id="varations" className="flow">
-          <h2 className="text-ibGreen-500 font-serif text-2xl font-black">
-            Variations
-          </h2>
-
+        <RecipeSection id="variations" heading="Variations">
           {documentToReactComponents(variations)}
-        </section>
+        </RecipeSection>
 
         {thisRemarks}
       </article>
