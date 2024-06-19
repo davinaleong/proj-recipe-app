@@ -1,6 +1,4 @@
-interface LinkInterface {
+export default interface LinkInterface {
   label: string
   href: string
 }
-
-export default LinkInterface

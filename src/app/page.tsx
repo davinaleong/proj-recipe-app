@@ -3,14 +3,14 @@ import Link from "next/link"
 import LinkInterface from "./lib/link/LinkInterface"
 import Card from "./components/card/card"
 import potIcon from "./../assets/images/ib-favicon.svg"
-import "./page.scss"
+import "./home.scss"
 
 // TODO: Remove
-const link: LinkInterface = { label: "Chicken Wings", href: "#" }
+const link: LinkInterface = { label: "Chicken Wings", href: "/recipe" }
 
 export default function Home() {
   return (
-    <main className="wrapper wrapper-centered q-container q-container-main bg-ibYellow-50 min-h-screen flow">
+    <main className="page page-home wrapper wrapper-centered flow">
       <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
         {`Welcome to Ivy's Bistro`}
       </h1>

@@ -42,6 +42,8 @@
   --fs-heading: theme("fontSize.3xl");
   --fs-sub-heading: theme("fontSize.2xl");
   --fs-micro-copy: theme("fontSize.sm");
+
+  --lh-base: theme("lineHeight.relaxed");
 }
 
 @layer base {
@@ -155,6 +157,7 @@ body {
   background-size: 3em 3em;
   font-size: var(--fs-base);
   font-family: var(--ff-primary);
+  line-height: var(--lh-base);
 }
 
 :focus {
@@ -222,10 +225,23 @@ main {
   }
 }
 
+.page {
+  --_page-spacer: var(--primary-spacer);
+
+  container-type: inline-size;
+  container-name: q-container-page;
+  background-color: var(--clr-bg);
+  padding-inline-start: var(--_page-spacer);
+  padding-inline-end: var(--_page-spacer);
+  padding-block-start: var(--_page-spacer);
+  padding-block-end: calc(var(--_page-spacer) + var(--header-height-sm));
+  min-height: 100vh;
+}
+
 @media screen and (width >= theme("screens.md")) {
-  main {
-    padding-block-start: calc(var(--_main-spacer) + var(--header-height-lg));
-    padding-block-end: var(--_main-spacer);
+  .page {
+    padding-block-start: calc(var(--_page-spacer) + var(--header-height-lg));
+    padding-block-end: var(--_page-spacer);
   }
 }
 

@@ -5,7 +5,7 @@ import houseIcon from "./../../../assets/images/ib-home-icon.svg"
 import copyrightIcon from "./../../../assets/images/ib-copyright-icon.svg"
 import "./primary-header.scss"
 
-function PrimaryHeader() {
+export default function PrimaryHeader() {
   return (
     <header className="primary-header">
       <div className="primary-header__wrapper wrapper wrapper-centered q-container q-container-primary-header">
@@ -40,5 +40,3 @@ function PrimaryHeader() {
     </header>
   )
 }
-
-export default PrimaryHeader

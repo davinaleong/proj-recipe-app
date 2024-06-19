@@ -1,0 +1,17 @@
+.page {
+  &-credits {
+    .back-icon {
+      display: block;
+    }
+  }
+}
+
+@container q-container-page (width > theme("screens.md")) {
+  .page {
+    &-credits {
+      .back-icon {
+        display: none;
+      }
+    }
+  }
+}
