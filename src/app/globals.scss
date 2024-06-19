@@ -10,7 +10,8 @@
   --wrapper-width: theme("screens.lg");
   --card-width: 200px;
   --flow-spacer: var(--primary-spacer);
-  --header-height: 6.73em;
+  --header-height-sm: 6.73em;
+  --header-height-lg: 3.8em;
 
   --clr-bg: theme("colors.ibYellow.50");
   --clr-fg: theme("colors.ibMaroon.500");
@@ -191,7 +192,7 @@ main {
   padding-inline-start: var(--_main-spacer);
   padding-inline-end: var(--_main-spacer);
   padding-block-start: var(--_main-spacer);
-  padding-block-end: calc(var(--_main-spacer) + var(--header-height));
+  padding-block-end: calc(var(--_main-spacer) + var(--header-height-sm));
 }
 
 .wrapper {
@@ -218,6 +219,13 @@ main {
 
   & > * + * {
     margin-block-start: var(--_flow-spacer);
+  }
+}
+
+@media screen and (width > theme("screens.md")) {
+  main {
+    padding-block-start: calc(var(--_main-spacer) + var(--header-height-lg));
+    padding-block-end: var(--_main-spacer);
   }
 }
 

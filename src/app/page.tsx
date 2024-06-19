@@ -10,9 +10,9 @@ const link: LinkInterface = { label: "Chicken Wings", href: "#" }
 export default function Home() {
   return (
     <main className="wrapper wrapper-centered q-container q-container-main bg-ibYellow-50 min-h-screen flow">
-      <h1 className="text-ibGreen-500 font-serif font-6xl font-black flex align-center gap-2">
+      <h1 className="text-ibGreen-500 font-serif font-8xl font-black flex align-center gap-2">
         <Link href="/" className="block">
-          <Image src={potIcon} alt="Pot icon" width="32" height="32" />
+          <Image src={potIcon} alt="Pot icon" width="32" />
           <span className="sr-only">Home</span>
         </Link>
         {`Welcome to Ivy's Bistro`}
