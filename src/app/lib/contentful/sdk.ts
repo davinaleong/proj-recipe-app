@@ -14,7 +14,7 @@ export const client: ContentfulClientApi<undefined> = createClient({
   accessToken: CONTENTFUL_ACCESS_TOKEN,
 })
 
-export async function getEntries(slug: string = ``) {
+export async function getContentfulEntries(slug: string = "") {
   let object: any = {
     content_type: CONTENTFUL_TYPE_ID,
     limit: Number(CONTENTFUL_LIMIT),
@@ -40,12 +40,12 @@ export async function getEntries(slug: string = ``) {
 
 export interface LibContentfulSdkInterface {
   client: ContentfulClientApi<undefined>
-  getEntries(slug: string): any
+  getContentfulEntries(slug: string): any
 }
 
 const LibContentfulSdk: LibContentfulSdkInterface = {
   client,
-  getEntries,
+  getContentfulEntries,
 }
 
 export default LibContentfulSdk

@@ -1,0 +1,21 @@
+.page {
+  &-recipe {
+    img {
+      object-fit: cover;
+      aspect-ratio: theme("aspectRatio.video");
+    }
+
+    ul,
+    ol {
+      padding-inline-start: var(--primary-spacer);
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+  }
+}

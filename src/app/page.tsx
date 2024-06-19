@@ -2,11 +2,11 @@ import Image from "next/image"
 import Link from "next/link"
 import Card from "./components/card/card"
 import potIcon from "./../assets/images/ib-favicon.svg"
-import { getEntries } from "./lib/contentful/sdk"
+import { getContentfulEntries } from "./lib/contentful/sdk"
 import "./home-page.scss"
 
 async function getData() {
-  return getEntries()
+  return getContentfulEntries()
 }
 
 export default async function Home() {
@@ -14,9 +14,11 @@ export default async function Home() {
 
   return (
     <main className="page page-home wrapper wrapper-centered flow">
-      <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
-        {`Welcome to Ivy's Bistro`}
-      </h1>
+      <header>
+        <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
+          {`Welcome to Ivy's Bistro`}
+        </h1>
+      </header>
 
       <p className="flex align-center gap-2">
         <Link href="/" className="home-logo">
