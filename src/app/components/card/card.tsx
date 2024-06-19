@@ -11,8 +11,8 @@ function Card({ recipe }: CardPropsInterface) {
 
   let thisSrc: any = placeholder
   let thisAlt: string = "ib-no-image-b.png"
-  let thisWidth: any = 32
-  let thisHeight: any = 32
+  let thisWidth: any = 1920
+  let thisHeight: any = 1080
 
   if (image) {
     const { fields } = image
