@@ -2,12 +2,12 @@
   --_btn-clr: var(--clr-btn);
   --_btn-bg-clr: var(--clr-btn-bg);
   --_btn-border-clr: var(--clr-btn-border);
-  --_btn-border: var(--btn-border);
+  --_btn-border: thin solid var(--_btn-border-clr);
 
   --_btn-hover-clr: var(--clr-btn-hover);
   --_btn-hover-bg-clr: var(--clr-btn-hover-bg);
   --_btn-hover-border-clr: var(--clr-btn-hover-border);
-  --_btn-hover-border: var(--btn-hover-border);
+  --_btn-hover-border: thin solid var(--_btn-hover-border-clr);
 
   --_btn-spacer-block: theme("spacing.3");
   --_btn-spacer-inline: theme("spacing.4");
