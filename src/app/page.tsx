@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import Card from "./components/card/card"
-import FulfillmentDialog from "./components/dialogs/fulfillmentDialog"
 import potIcon from "./../assets/images/ib-favicon.svg"
 import { getContentfulEntries } from "./lib/contentful/sdk"
 import "./home-page.scss"
@@ -34,8 +33,6 @@ export default async function Home() {
           <Card key={index} recipe={recipe} />
         ))}
       </div>
-
-      <FulfillmentDialog label="Please enter the password to proceed:" />
     </main>
   )
 }

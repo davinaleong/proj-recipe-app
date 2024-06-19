@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import PrimaryHeader from "./components/primaryHeader/primaryHeader"
+import FulfillmentDialog from "./components/dialogs/fulfillmentDialog"
 import BackToTopButton from "./components/buttons/backToTopButton"
 import "./globals.scss"
 
@@ -20,6 +21,7 @@ export default function RootLayout({
 
         {children}
 
+        <FulfillmentDialog label="Please enter the password to proceed:" />
         <BackToTopButton />
       </body>
     </html>

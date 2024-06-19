@@ -1,10 +1,11 @@
 import LibFulfillmentInterface from "./LibFulfillmentInterface"
 
-export const PASSWORD: string = `${process.env.PASSWORD}`
+export const NEXT_PUBLIC_PASSWORD: string = `${process.env.NEXT_PUBLIC_PASSWORD}`
+console.log(NEXT_PUBLIC_PASSWORD)
 export const isFulfilled: boolean = false
 
 const LibFulfillment: LibFulfillmentInterface = {
-  PASSWORD,
+  NEXT_PUBLIC_PASSWORD,
   isFulfilled,
 }
 

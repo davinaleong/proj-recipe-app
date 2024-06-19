@@ -1,4 +1,4 @@
 export default interface LibFulfillmentInterface {
-  PASSWORD: string
+  NEXT_PUBLIC_PASSWORD: string
   isFulfilled: boolean
 }

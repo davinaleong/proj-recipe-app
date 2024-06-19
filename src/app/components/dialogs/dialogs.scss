@@ -1,41 +1,52 @@
 .dialog {
-  --_dialog-bg-clr: theme("colors.ibYellow.100");
-  --_dialog-padding: var(--primary-spacer);
-  --_dialog-gap: var(--primary-spacer);
-  --_dialog-br: theme("borderRadius.sm");
-  --_dialog-shadow: theme("boxShadow.md");
+  --_dialog-body-bg-clr: theme("colors.ibYellow.100");
+  --_dialog-body-padding: var(--primary-spacer);
+  --_dialog-body-gap: var(--primary-spacer);
+  --_dialog-body-br: theme("borderRadius.sm");
+  --_dialog-body-shadow: theme("boxShadow.md");
 
   --_dialog-input-padding: var(--secondary-spacer);
 
   position: fixed;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  background-color: var(--_dialog-bg-clr);
-  border-radius: var(--_dialog-br);
-  box-shadow: var(--_dialog-shadow);
-  overflow: hidden;
-  padding-block-start: var(--_dialog-padding);
-  padding-block-end: var(--_dialog-padding);
-  padding-inline-start: var(--_dialog-padding);
-  padding-inline-end: var(--_dialog-padding);
+  inset: 0;
+  background-color: hsla(0, 0, 0, 0.5);
 
-  &__form {
-    display: grid;
-    grid-template-rows: repeat(3, min-content);
-    gap: var(--_dialog-gap);
+  &__body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 3;
+    background-color: var(--_dialog-body-bg-clr);
+    border-radius: var(--_dialog-body-br);
+    box-shadow: var(--_dialog-body-shadow);
+    overflow: hidden;
+    padding-block-start: var(--_dialog-body-padding);
+    padding-block-end: var(--_dialog-body-padding);
+    padding-inline-start: var(--_dialog-body-padding);
+    padding-inline-end: var(--_dialog-body-padding);
 
-    &__input {
-      padding-block-start: var(--_dialog-input-padding);
-      padding-block-end: var(--_dialog-input-padding);
-      padding-inline-start: var(--_dialog-input-padding);
-      padding-inline-end: var(--_dialog-input-padding);
-      border-radius: var(--_dialog-br);
-    }
+    &__form {
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      gap: var(--_dialog-body-gap);
 
-    &__btn {
-      --_btn-spacer-block: theme("spacing.2");
-      --_btn-spacer-inline: theme("spacing.3");
+      &__input {
+        padding-block-start: var(--_dialog-input-padding);
+        padding-block-end: var(--_dialog-input-padding);
+        padding-inline-start: var(--_dialog-input-padding);
+        padding-inline-end: var(--_dialog-input-padding);
+        border-radius: var(--_dialog-br);
+      }
+
+      &__btn {
+        --_btn-spacer-block: theme("spacing.2");
+        --_btn-spacer-inline: theme("spacing.3");
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
     }
   }
 }
