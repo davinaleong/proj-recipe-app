@@ -5,20 +5,35 @@ import "./card.scss"
 
 import CardPropsInterface from "./CardPropsInterface"
 
-function Card({ image, alt, link }: CardPropsInterface) {
-  // Return an empty element if no link is supplied
-  if (!link) return <></>
-  // Assign the placeholder image if no image is supplied
-  const thisImage: any = image ? image : placeholder
-  // Assign a placeholder "alt" if no alt text is supplied
-  const thisAlt: string = alt ? alt : "No image available for this recipe"
+function Card({ recipe }: CardPropsInterface) {
+  const { fields } = recipe
+  const { title, slug, image } = fields
+
+  let thisSrc: any = placeholder
+  let thisAlt: string = "ib-no-image-b.png"
+  let thisWidth: any = 32
+  let thisHeight: any = 32
+
+  if (image) {
+    const { fields } = image
+    thisSrc = `http:${fields.file.url}`
+    thisAlt = `${fields.file.title}`
+    thisWidth = fields.file.details.image.width
+    thisHeight = fields.file.details.image.height
+  }
 
   return (
     <div className="card">
-      <Image src={thisImage} alt={thisAlt} className="card__image" />
+      <Image
+        src={thisSrc}
+        alt={thisAlt}
+        className="card__image"
+        width={thisWidth}
+        height={thisHeight}
+      />
       <div className="card__body">
         <p>
-          <Link href={link.href}>{link.label}</Link>
+          <Link href={`/${slug}`}>{title}</Link>
         </p>
       </div>
     </div>

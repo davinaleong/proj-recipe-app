@@ -35,7 +35,7 @@
   }
 }
 
-@container q-container-main (width > theme("screens.md")) {
+@container q-container-page (width >= theme("screens.md")) {
   .card-grid {
     .card:first-of-type {
       grid-row: 1 / 3;
