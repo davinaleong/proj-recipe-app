@@ -72,6 +72,21 @@
 }
 
 .btn-back {
+  --_btn-clr: theme("colors.black");
+  --_btn-bg-clr: transparent;
+  --_btn-border-clr: transparent;
+  --_btn-border: none;
+
+  --_btn-hover-clr: theme("colors.black");
+  --_btn-hover-bg-clr: transparent;
+  --_btn-hover-border-clr: transparent;
+  --_btn-hover-border: none;
+
+  --_btn-spacer-block: theme("spacing.2");
+  --_btn-spacer-inline: theme("spacing.2");
+
+  --_btn-shadow: none;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;

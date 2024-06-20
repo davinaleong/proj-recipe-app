@@ -32,6 +32,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const {
     title,
+    subtitle,
     description,
     ingredients,
     preparation,
@@ -39,6 +40,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
     remarks,
     image,
   } = fields
+
+  const thisSubtitle: any = subtitle ? (
+    <p className="page-recipe__subtitle">{subtitle}</p>
+  ) : (
+    <></>
+  )
 
   let thisSrc: any = placeholder
   let thisAlt: string = "ib-no-image-b.png"
@@ -85,11 +92,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <main className="page page-recipe wrapper wrapper-centered flow">
       <article className="flow">
-        <header className="flow">
-          <h1 className="text-ibGreen-500 font-serif text-4xl font-black flex align-center gap-2">
+        <header className="">
+          <div className="page-recipe__header__inner">
             <BackButton />
-            {title}
-          </h1>
+            <h1>{title}</h1>
+            {thisSubtitle}
+          </div>
 
           <nav className="flex align-center justify-around">
             {description ? <Link href="#description">Description</Link> : <></>}
