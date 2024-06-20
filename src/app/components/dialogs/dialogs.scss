@@ -4,6 +4,7 @@
   --_dialog-body-gap: var(--primary-spacer);
   --_dialog-body-br: theme("borderRadius.sm");
   --_dialog-body-shadow: theme("boxShadow.md");
+  --_dialog-body-width: clamp(30ch, 100% - (var(--primary-spacer) * 2), 60ch);
 
   --_dialog-input-padding: var(--secondary-spacer);
 
@@ -20,6 +21,7 @@
     background-color: var(--_dialog-body-bg-clr);
     border-radius: var(--_dialog-body-br);
     box-shadow: var(--_dialog-body-shadow);
+    width: var(--_dialog-body-width);
     overflow: hidden;
     padding-block-start: var(--_dialog-body-padding);
     padding-block-end: var(--_dialog-body-padding);
