@@ -26,11 +26,7 @@ export default function FulfillmentDialog({
     } else {
       setIsFulfilled(false)
       const thisMessage = message ? message : "The password is incorrect."
-      setError(
-        <p className="text-ibRed-500 text-sm">
-          {thisMessage} {NEXT_PUBLIC_PASSWORD}
-        </p>
-      )
+      setError(<p className="text-ibRed-500 text-sm">{thisMessage}</p>)
     }
   }
 
